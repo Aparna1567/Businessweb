@@ -44,7 +44,7 @@ export const projects = [
     description:
       "A modern villa project combining minimalist design and smart living features. Focused on sustainability, open layouts, and elegant finishes.",
     image: "/images/projects/project-01.jpg",
-    link: "/projects/modern-architecture",
+    link: "https://www.ktid.net/case-study-laurel-avenue",
   },
   {
     id: 2,
@@ -53,7 +53,7 @@ export const projects = [
     description:
       "An innovative city landscaping initiative creating eco-friendly public spaces with smart irrigation and vertical gardens.",
     image: "/images/projects/project-02.jpg",
-    link: "/projects/urban-landscape",
+    link: "https://www.usa-shade.com/blog/guide-to-urban-landscape-design/",
   },
   {
     id: 3,
@@ -62,7 +62,7 @@ export const projects = [
     description:
       "A premium interior design project for luxury apartments featuring warm tones, bespoke furniture, and ambient lighting.",
     image: "/images/projects/project-03.jpg",
-    link: "/projects/luxury-interior",
+    link: "https://thearchitectsdiary.com/luxury-apartment-interior-design-excelling-in-thoughtfully-selected-decor-open-end-studio/",
   },
   {
     id: 4,
@@ -71,7 +71,7 @@ export const projects = [
     description:
       "A complete transformation of a corporate workspace with open-plan design, ergonomic furniture, and acoustic optimization.",
     image: "/images/projects/project-04.jpg",
-    link: "/projects/office-renovation",
+    link: "https://www.steelcase.com/research/filters/corporate-office/",
   },
 ];
 
@@ -178,12 +178,18 @@ export const footerLinks = [
   { link: "Brand Strategy" },
 
   // Resources Section (6–12)
-  { link: "About Us" },
-  { link: "Our Team" },
-  { link: "Case Studies" },
-  { link: "Blog" },
-  { link: "FAQs" },
-  { link: "Contact Us" },
+  // { link: "About Us" },
+  // { link: "Our Team" },
+  // { link: "Case Studies" },
+  // { link: "Blog" },
+  // { link: "FAQs" },
+  // { link: "Contact Us" },
+
+// { link: "About Us", href: "/about" },
+// { link: "Our Team", href: "/team" },
+// { link: "Blog", href: "/blog" },
+// { link: "FAQs", href: "/faq" },
+// { link: "Contact Us", href: "/contact" },
 
   // Bottom Links (12–15)
   { link: "Privacy Policy" },

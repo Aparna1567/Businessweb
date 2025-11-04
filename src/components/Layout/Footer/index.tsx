@@ -16,7 +16,7 @@ const Footer=()=>{
                         <Icon icon="weui:location-outlined" className='w-6 h-6 mr-3 mt-1' />
                         <div className="flex flex-col">
                             <span>FD-3. Procube Complex</span>
-                            <span>Vadodara, Gujarat</span>
+                            <span>Chennai, Tamil Nadu</span>
 
                         </div>
                     </div>
@@ -26,7 +26,7 @@ const Footer=()=>{
                     </div>
                     <div className='flex items-center text-foottext'>
                         <Icon icon="clarity:email-line-retro-line" className='w-6 h-6' />
-                        <Link className='text-[15px] hover:text-prim' href="#">exampleweb@gmail.com</Link>
+                        <Link className='text-[15px] hover:text-prim' href="#">info@axora.com</Link>
                     </div>
 
                 </div>
@@ -57,7 +57,7 @@ const Footer=()=>{
                         <Image src="/images/footer/award-logo-2.webp" alt="award-logo-2" width={70} height={70} className='p-2 cursor-pointer bg-black'/>
                     </div>
                 </div>
-                <div className="lg:col-span-2">
+                {/* <div className="lg:col-span-2">
                     <h4 className='text-[18px] text-black mb-3 font-chakrapetch font-bold'>
                         Services
                     </h4>
@@ -69,20 +69,102 @@ const Footer=()=>{
                             </li>
                         ))}
                     </ul>
-                </div>
+                </div> */}
+
                   <div className="lg:col-span-2">
+  <h4 className='text-[18px] text-black mb-3 font-chakrapetch font-bold'>
+    Services
+  </h4>
+
+  <ul>
+    <li className="pb-2">
+      <Link href="/services/web-development" className='text-footertext text-[15px] hover:text-prim transition-colors'>
+        Web Design
+      </Link>
+    </li>
+
+    <li className="pb-2">
+      <Link href="/services/mobile-app-development" className='text-footertext text-[15px] hover:text-prim transition-colors'>
+        Mobile App Development
+      </Link>
+    </li>
+
+
+    <li className="pb-2">
+      <Link href="/services/ui-ux-design" className='text-footertext text-[15px] hover:text-prim transition-colors'>
+        UI/UX Design
+      </Link>
+    </li>
+
+    <li className="pb-2">
+      <Link href="/services/cloud-solutions" className='text-footertext text-[15px] hover:text-prim transition-colors'>
+            Cloud Solutions
+      </Link>
+    </li>
+
+
+    <li className="pb-2">
+      <Link href="/services/cyber-security" className='text-footertext text-[15px] hover:text-prim transition-colors'>
+        Cyber Security
+      </Link>
+    </li>
+  </ul>
+                </div>
+                
+
+                        {/* Resources */}
+                  {/* <div className="lg:col-span-2">
                     <h4 className='text-[18px] text-black mb-3 font-chakrapetch font-bold'>
                         Resources
                     </h4>
                     <ul>
                         {footerLinks.slice(6,12).map((item,index)=>(
                             <li key={index} className='pb-2'>
-                                <Link href="#" className='text-footertext text-[15px] hover:text-prim transition-colors'>
+                                <Link href={item.link} className='text-footertext text-[15px] hover:text-prim transition-colors'>
                                 { item.link}</Link>
                             </li>
                         ))}
                     </ul>
+                </div> */}
+                <div className="lg:col-span-2">
+  <h4 className='text-[18px] text-black mb-3 font-chakrapetch font-bold'>
+    Resources
+  </h4>
+
+  <ul>
+    <li className="pb-2">
+      <Link href="/about" className='text-footertext text-[15px] hover:text-prim transition-colors'>
+        About Us
+      </Link>
+    </li>
+
+    <li className="pb-2">
+      <Link href="/team" className='text-footertext text-[15px] hover:text-prim transition-colors'>
+        Our Team
+      </Link>
+    </li>
+
+
+    <li className="pb-2">
+      <Link href="/blog" className='text-footertext text-[15px] hover:text-prim transition-colors'>
+        Blog
+      </Link>
+    </li>
+
+    <li className="pb-2">
+      <Link href="/faq" className='text-footertext text-[15px] hover:text-prim transition-colors'>
+        FAQs
+      </Link>
+    </li>
+
+    <li className="pb-2">
+      <Link href="/contact" className='text-footertext text-[15px] hover:text-prim transition-colors'>
+        Contact Us
+      </Link>
+    </li>
+  </ul>
                 </div>
+
                 <div className="lg:col-span-5">
                     <p className="text-[18px] text-blsck font-bold font-chakrapetch">
                         Sign up for updates
@@ -114,8 +196,8 @@ const Footer=()=>{
             <div className="flex flex-col sm:flex-row justify-between items-center border-t mt-10 pt-6 text-center sm:text-left">
                <p className='text-[15px] text-foottext mb-3 sm:mb-0'>
                 All rights reserved by {""} 
-                <Link href="https://unicode.in/" target="_blank" className='hover:text-prim'>
-                UIcode</Link>
+                <Link href="/" target="_blank" className='hover:text-prim'>
+                 Aparna K </Link>
                </p>
                <div className="flex gap-4">
                 {footerLinks.slice(12,15).map((item,index)=>(

@@ -103,21 +103,21 @@ const mobileMenuRef=useRef<HTMLDivElement>(null);
                                   <span className='text-pera-light font-chakrapetch'>Email</span>{" "}
                                   <br />
                                   <Link href="/contact" className='text-white font-unbounded font-normal'>
-                                  info@axora.com</Link>
+                                 info@axora.com</Link>
           
                               </div>
                               <div>
                                   <span className='text-pera-light font-chakrapetch'>Email </span> {" "}
                                   <br />
                                   <Link href="/contact" className='text-white font-unbounded font-normal'>
-                                  FF - 42 , Procube Complex Vadodara</Link>
+                                  FF - 42 , Procube Complex, Chennai</Link>
           
                               </div>
                           </div>
                           {/* Social */}
                           <h3 className='font-chakrapetch pb-3 pt-8 '>Follow Us</h3>
                           <div className="social-icons flex gap-3">
-                              <Link href="/https://www.facebook.com/">
+                              {/* <Link href="/https://www.facebook.com/">
                               <Icon 
                                   icon="gg:facebook" width="30" height="30" className='text-white p-1 rounded-sm cursor-pointer bg-blue-600 transition duration-500 hover:translate-y-1'
                               />
@@ -138,7 +138,21 @@ const mobileMenuRef=useRef<HTMLDivElement>(null);
                               <Icon 
                                   icon="basil:linkedin-solid" width="30" height="30" className='text-white p-1 rounded-sm cursor-pointer bg-blue-400 transition duration-500 hover:translate-y-1'
                               />
-                              </Link>
+                              </Link> */}
+
+                              <Link href="https://www.facebook.com/">
+                                                                      <Icon icon="fe:facebook" width="28" height="28" className='text-blue-600 p-1 rounded-sm cursor-pointer bg-black-600 transition duration-500 hover:translate-y-1' />
+                                                                      </Link>
+                                                                      <Link href="https://x.com/" >
+                                                                      <Icon icon="fa6-brands:square-twitter" width="28" height="28" className='text-white p-1 rounded-sm cursor-pointer bg-black-600 transition duration-500 hover:translate-y-1' />
+                                                                      </Link>
+                                                                      <Link href="https://www.linkedin.com/" >
+                                                                      <Icon icon="fa6-brands:linkedin" width="28" height="28" className='text-blue-600 p-1 rounded-sm cursor-pointer bg-black-600 transition duration-500 hover:translate-y-1' />
+                                                                      </Link>
+                                                                      <Link href="https://www.youtube.com/">
+                                                                      <Icon icon="cbi:youtube-alt" width="30" height="30" className='text-red-500 p-1 rounded-sm cursor-pointer bg-black-600 transition duration-500 hover:translate-y-1' />
+                                                                      </Link>
+                              
                           </div>
            </div>
       <Sidebar isOpenSidebar={isOpenSidebar} setIsOpenSidebar={setIsOpenSidebar} />

@@ -113,7 +113,7 @@ const [tabConfig,dispatch]=useReducer(reducer,initialTabConfig);
                                      Basic Performance tracking
                                 </p>
                             </div>
-                            <Link href="/pricing" className="text-white bg-dark h-[50px] text-sm lg:text-16 w-full rounded-full font-chakrapetch font-semibold flex gap-2 ps-4 pe-2 justify-center tracking-wider group my-8">
+                            <Link href="/pricing" className="text-white bg-dark h-[50px] text-sm lg:text-16 w-full rounded-full font-chakrapetch font-semibold flex gap-2 ps-4 pe-2 justify-center items-center tracking-wider group my-8">
                             Choose package
                             <Icon icon="tabler:arrow-right" width="24" height="24"  className="bg-prim text-white rounded-full h-full w-[35px] p-1.5 group-hover:-rotate-45 transition duration-300"  />
 
@@ -150,7 +150,7 @@ const [tabConfig,dispatch]=useReducer(reducer,initialTabConfig);
                                      Collaboration tools for team
                                 </p>
                             </div>
-                            <Link href="/pricing" className="text-white bg-dark h-[50px] text-sm lg:text-16 w-full rounded-full font-chakrapetch font-semibold flex gap-2 ps-4 pe-2 justify-center tracking-wider group my-8">
+                            <Link href="/pricing" className="text-white bg-dark h-[50px] text-sm lg:text-16 w-full rounded-full font-chakrapetch font-semibold flex gap-2 ps-4 pe-2 justify-center items-center tracking-wider group my-8">
                             Choose package
                             <Icon icon="tabler:arrow-right" width="24" height="24"  className="bg-prim text-white rounded-full h-full w-[35px] p-1.5 group-hover:-rotate-45 transition duration-300"  />
                             
@@ -187,7 +187,7 @@ const [tabConfig,dispatch]=useReducer(reducer,initialTabConfig);
                                      24/7 emergency services
                                 </p>
                             </div>
-                            <Link href="/pricing" className="text-white bg-dark h-[50px] text-sm lg:text-16 w-full rounded-full font-chakrapetch font-semibold flex gap-2 ps-4 pe-2 justify-center tracking-wider group my-8">
+                            <Link href="/pricing" className="text-white bg-dark h-[50px] text-sm lg:text-16 w-full rounded-full font-chakrapetch font-semibold flex gap-2 ps-4 pe-2 justify-center items-center tracking-wider group my-8">
                             Choose package
                             <Icon icon="tabler:arrow-right" width="24" height="24"  className="bg-prim text-white rounded-full h-full w-[35px] p-1.5 group-hover:-rotate-45 transition duration-300"  />
                             

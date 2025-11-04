@@ -57,7 +57,7 @@ const Sidebar:React.FC<SidebarProps>=({isOpenSidebar,setIsOpenSidebar})=> {
                         <span className='text-pera-light font-chakrapetch'>Email </span> {" "}
                         <br />
                         <Link href="/contact" className='text-white font-unbounded font-normal'>
-                        FF - 42 , Procube Complex Vadodara</Link>
+                        FF - 42 , Procube Complex , Chennai</Link>
 
                     </div>
                 </div>
@@ -87,17 +87,17 @@ const Sidebar:React.FC<SidebarProps>=({isOpenSidebar,setIsOpenSidebar})=> {
                     />
                     </Link> */}
                     {/* className='text-muted hover:text-prim transition-colors' */}
-                    <Link href="https://www.facebook.com/">
-                                        <Icon icon="fe:facebook" width="28" height="28" className='text-white p-1 rounded-sm cursor-pointer bg-blue-600 transition duration-500 hover:translate-y-1' />
+                                      <Link href="https://www.facebook.com/">
+                                        <Icon icon="fe:facebook" width="28" height="28" className='text-blue-600 p-1 rounded-sm cursor-pointer bg-black-600 transition duration-500 hover:translate-y-1' />
                                         </Link>
                                         <Link href="https://x.com/" >
-                                        <Icon icon="fa6-brands:square-twitter" width="28" height="28" className='text-white p-1 rounded-sm cursor-pointer bg-blue-600 transition duration-500 hover:translate-y-1' />
+                                        <Icon icon="fa6-brands:square-twitter" width="28" height="28" className='text-white p-1 rounded-sm cursor-pointer bg-black-600 transition duration-500 hover:translate-y-1' />
                                         </Link>
                                         <Link href="https://www.linkedin.com/" >
-                                        <Icon icon="fa6-brands:linkedin" width="28" height="28" className='text-white p-1 rounded-sm cursor-pointer bg-blue-600 transition duration-500 hover:translate-y-1' />
+                                        <Icon icon="fa6-brands:linkedin" width="28" height="28" className='text-blue-600 p-1 rounded-sm cursor-pointer bg-black-600 transition duration-500 hover:translate-y-1' />
                                         </Link>
                                         <Link href="https://www.youtube.com/">
-                                        <Icon icon="cbi:youtube-alt" width="30" height="30" className='text-white p-1 rounded-sm cursor-pointer bg-blue-600 transition duration-500 hover:translate-y-1' />
+                                        <Icon icon="cbi:youtube-alt" width="30" height="30" className='text-red-500 p-1 rounded-sm cursor-pointer bg-black-600 transition duration-500 hover:translate-y-1' />
                                         </Link>
 
                 </div>

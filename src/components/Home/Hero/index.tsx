@@ -16,7 +16,7 @@ const Hero:React.FC=()=> {
             <div className="hero-content text-white">
                 <h2 className='md:text-60 sm:text-40 text-28 text-white mb-9 lg:mb-3 w-full lg:w-3/4'>
                 Transforming ideas into Reality</h2>
-                <Link 
+                {/* <Link 
                     href="/about" 
                     className='text-white bg-dark text-16 h-[50px] lg:text-sm w-fit 
                             rounded-full font-chakrapetch font-semibold flex gap-2 ps-4 pe-2 py-2 justify-center items-center tracking-wider group
@@ -24,7 +24,13 @@ const Hero:React.FC=()=> {
                     '>Get Started Now
                     <Icon icon="tabler:arrow-right" width="24" height="24"
                     className='bg-prim text-white rounded-full h-full w-[35px] p-1.5 group-hover:-rotate-45 transition-all duration-300' />
-                    </Link>
+                    </Link> */}
+                     <Link href="/about" className="text-white bg-dark text-16 h-[50px] lg:text-sm w-fit 
+                            rounded-full font-chakrapetch font-semibold flex gap-2 ps-4 pe-2 py-2 justify-center items-center tracking-wider group" >
+                                         Get Started Now
+                                <Icon icon="tabler:arrow-right" width="24" height="24" 
+                                className='bg-prim text-white rounded-full h-full w-[35px] p-1.5 group-hover:-rotate-45 transition-all duration-300'  />
+                                </Link>
             </div>
         </div>
 

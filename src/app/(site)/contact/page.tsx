@@ -1,15 +1,96 @@
 
+// "use client"
+// import { Icon } from '@iconify/react';
+// import Link from 'next/link';
+
+// import HeroSub from '@/components/SharedComponents/HeroSub';
+
+// export default function Page(){
+//     const breadcrumbLinks=[
+//         {href:"/",text:"Home"},
+//         {href:"/contact",text:"Contact"}
+//     ];
 "use client"
 import { Icon } from '@iconify/react';
-import Link from 'next/link';
-
 import HeroSub from '@/components/SharedComponents/HeroSub';
+import { useState } from "react";
+import Link from 'next/link';
+export default function Page() {
 
-export default function Page(){
-    const breadcrumbLinks=[
-        {href:"/",text:"Home"},
-        {href:"/contact",text:"Contact"}
-    ];
+  const breadcrumbLinks = [
+    { href: "/", text: "Home" },
+    { href: "/contact", text: "Contact" }
+  ];
+type FormErrors = {
+  name?: string;
+  email?: string;
+  phone?: string;
+  option?: string;
+  message?: string;
+};
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    option: "",
+    message: ""
+  });
+const [successMessage, setSuccessMessage] = useState("");
+const [errors, setErrors] = useState<FormErrors>({});
+
+
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement  | HTMLSelectElement> ) => {
+    // setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+  setFormData(prev => ({ ...prev, [name]: value }));
+  setErrors(prev => ({ ...prev, [name]: undefined })); // clear single field error
+  if (successMessage) setSuccessMessage(""); // hide success if they start typing again
+  };
+
+  const handleSubmit = (e:React.FormEvent<HTMLFormElement> ) => {
+    // e.preventDefault();
+    // setSuccess(true);
+
+    // // Reset after submit (optional)
+    // setFormData({
+    //   name: "",
+    //   email: "",
+    //   phone: "",
+    //   option: "",
+    //   message: ""
+    // });
+    e.preventDefault();
+
+  // simple client-side validation
+  const newErrors: FormErrors = {};
+
+if (!formData.name?.trim()) newErrors.name = "Full name is required";
+if (!formData.email?.trim() || !/^\S+@\S+\.\S+$/.test(formData.email)) newErrors.email = "Valid email is required";
+if (!formData.phone?.trim()) newErrors.phone = "Phone number is required";
+if (!formData.option) newErrors.option = "Select one option";
+if (!formData.message?.trim()) newErrors.message = "Message is required";
+
+
+  setErrors(newErrors);
+
+  if (Object.keys(newErrors).length > 0) {
+    // stop submit if validation failed
+    return;
+  }
+
+  // success: you can call API here before showing success
+  setSuccessMessage("✅ Message has been sent successfully!");
+
+  // clear form fields
+  setFormData({ name: "", email: "", phone: "", option: "", message: "" });
+
+  // auto-hide after 2.5 seconds
+  setTimeout(() => {
+    setSuccessMessage("");
+  }, 2500);
+  };
+
     return(
         <>
         <HeroSub title="Contact" description='' breadcrumbLinks={breadcrumbLinks} />
@@ -38,8 +119,9 @@ export default function Page(){
                                 </div>
                                  <div className="contact-info">
                                 <h4 className='font-unbounded text-18 pb-2 group-hover:text-white duration-300 transition-colors'>Email Us</h4>
-                                <p className='text-gray-500 group-hover:text-white duration-300 transition-colors'>webdesign@gmail.com
+                                <p className='text-gray-500 group-hover:text-white duration-300 transition-colors'>
                                     webdesign@gmail.com
+                                    aparnaapar99@gmail.com
                                 </p>
                                 </div>
                                 
@@ -89,7 +171,7 @@ export default function Page(){
                     <h2 className='text-2xl font-semibold text-gray-800 mb-8 font-unbounded'>
                         Feel free to get in touch or visit our Location.
                     </h2>
-                    <form className='grid md:grid-cols-2 gap-6'>
+                    {/* <form className='grid md:grid-cols-2 gap-6'>
                         <div>
                             <label className='block text-gray-600 font-medium mb-2'>Full Name</label>
                             <input type="text" placeholder='Enter your Name' className='w-full border-b border-gray-300 focus:border-teal-50 focus:outline-none py-2' />
@@ -129,10 +211,216 @@ export default function Page(){
                                     <Icon icon="tabler:arrow-right" width="24" height="24"
                                     className='bg-prim text-white rounded-full h-full w-[35px] p-1.5 group-hover:-rotate-45 transition-all duration-300' />
                                     </Link>
-                    </form>
+                    </form> */}
+                    
+              {/* <form onSubmit={handleSubmit} className='grid md:grid-cols-2 gap-6'>
+                
+                <div>
+                  <label className='block text-gray-600 font-medium mb-2'>Full Name</label>
+                  <input 
+                    name="name"
+                    type="text" 
+                    value={formData.name}
+                    onChange={handleChange}
+                    placeholder='Enter your Name' 
+                    className='w-full border-b border-gray-300 focus:border-teal-50 focus:outline-none py-2' 
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className='block text-gray-600 font-medium mb-2'>Email Address</label>
+                  <input 
+                    name="email"
+                    type="email" 
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder='Enter your Email' 
+                    className='w-full border-b border-gray-300 focus:border-teal-50 focus:outline-none py-2' 
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className='block text-gray-600 font-medium mb-2'>Phone Number</label>
+                  <input 
+                    name="phone"
+                    type="tel" 
+                    value={formData.phone}
+                    onChange={handleChange}
+                    placeholder='Enter your Number' 
+                    className='w-full border-b border-gray-300 focus:border-teal-50 focus:outline-none py-2' 
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className='block text-gray-600 font-medium mb-2'>Choose an option</label>
+                  <select 
+                    name="option"
+                    value={formData.option}
+                    onChange={handleChange}
+                    className='w-full border-b border-gray-300 focus:border-teal-50 focus:outline-none py-2' 
+                    required
+                  >
+                    <option value="">Select</option>
+                    <option>Training & Development</option>
+                    <option>IT Support & Maintenance</option>
+                    <option>Marketing Strategy</option>
+                    <option>Business Strategy</option>
+                    <option>Customer Experience</option>
+                  </select>
+                </div>
+
+                <div className="md:col-span-2">
+                  <label className='block text-gray-600 font-medium mb-2'>Type Message</label>
+                  <textarea 
+                    name="message"
+                    rows={4} 
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder='Write your message...' 
+                    className='w-full border-b border-gray-300 focus:border-teal-50 focus:outline-none py-2'
+                    required
+                  />
+                </div>
+
+                <button 
+                  type="submit"
+                  className='text-white bg-dark text-sm h-[50px] w-fit 
+                  rounded-full font-chakrapetch font-semibold flex gap-2 ps-4 pe-2 py-2 
+                  justify-center items-center tracking-wider group'
+                >
+                  Send Message
+                  <Icon 
+                    icon="tabler:arrow-right" 
+                    width="24" height="24"
+                    className='bg-prim text-white rounded-full h-full w-[35px] p-1.5 
+                    group-hover:-rotate-45 transition-all duration-300' 
+                  />
+                </button>
+
+                {success && (
+                  <p className="text-green-600 font-semibold md:col-span-2">
+                    ✅ Message has been sent successfully!
+                  </p>
+                )}
+
+              </form> */}
+
+              <form onSubmit={handleSubmit} className='grid md:grid-cols-2 gap-6'>
+  <div>
+    <label className='block text-gray-600 font-medium mb-2'>Full Name</label>
+    <input
+      name="name"
+      type="text"
+      value={formData.name}
+      onChange={handleChange}
+      placeholder='Enter your Name'
+      className={`w-full border-b py-2 focus:outline-none ${
+        errors.name ? "border-red-500 text-red-600" : "border-gray-300"
+      }`}
+    />
+    {errors.name && <p className="text-red-500 text-sm mt-1">Full name is required</p>}
+  </div>
+
+  <div>
+    <label className='block text-gray-600 font-medium mb-2'>Email Address</label>
+    <input
+      name="email"
+      type="email"
+      value={formData.email}
+      onChange={handleChange}
+      placeholder='Enter your Email'
+      className={`w-full border-b py-2 focus:outline-none ${
+        errors.email ? "border-red-500 text-red-600" : "border-gray-300"
+      }`}
+    />
+    {errors.email && <p className="text-red-500 text-sm mt-1">Valid email is required</p>}
+  </div>
+
+  <div>
+    <label className='block text-gray-600 font-medium mb-2'>Phone Number</label>
+    <input
+      name="phone"
+      type="tel"
+      value={formData.phone}
+      onChange={handleChange}
+      placeholder='Enter your Number'
+      className={`w-full border-b py-2 focus:outline-none ${
+        errors.phone ? "border-red-500 text-red-600" : "border-gray-300"
+      }`}
+    />
+    {errors.phone && <p className="text-red-500 text-sm mt-1">Phone is required</p>}
+  </div>
+
+  <div>
+    <label className='block text-gray-600 font-medium mb-2'>Choose an option</label>
+    <select
+      name="option"
+      value={formData.option}
+      onChange={handleChange}
+      className={`w-full border-b py-2 focus:outline-none ${
+        errors.option ? "border-red-500 text-red-600" : "border-gray-300"
+      }`}
+    >
+      <option value="">Select</option>
+      <option>Training & Development</option>
+      <option>IT Support & Maintenance</option>
+      <option>Marketing Strategy</option>
+      <option>Business Strategy</option>
+      <option>Customer Experience</option>
+    </select>
+    {errors.option && <p className="text-red-500 text-sm mt-1">Please select an option</p>}
+  </div>
+
+  <div className="md:col-span-2">
+    <label className='block text-gray-600 font-medium mb-2'>Type Message</label>
+    <textarea
+      name="message"
+      rows={4}
+      value={formData.message}
+      onChange={handleChange}
+      placeholder='Write your message...'
+      className={`w-full border-b py-2 focus:outline-none ${
+        errors.message ? "border-red-500 text-red-600" : "border-gray-300"
+      }`}
+    />
+    {errors.message && <p className="text-red-500 text-sm mt-1">Message is required</p>}
+  </div>
+
+  <button
+    type="submit"
+    className='text-white bg-dark text-sm h-[50px] w-fit rounded-full font-chakrapetch font-semibold flex gap-2 ps-4 pe-2 py-2 justify-center items-center tracking-wider group'
+  >
+    Send Message
+    <Icon
+      icon="tabler:arrow-right"
+      width="24" height="24"
+      className='bg-prim text-white rounded-full h-full w-[35px] p-1.5 group-hover:-rotate-45 transition-all duration-300'
+    />
+  </button>
+
+  {/* success text area - will auto-hide */}
+  {successMessage && (
+    <p className="text-green-600 font-semibold md:col-span-2">
+      {successMessage}
+    </p>
+  )}
+</form>
+
                 </div>
                 <div className='w-full lg:w-[50%] h-[300px] lg:h-[500px]'>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236213.0035246995!2d73.00827044332871!3d22.322336995982667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc8ab91a3ddab%3A0xac39d3bfe1473fb8!2sVadodara%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1761296127360!5m2!1sen!2sin" width="100%" height="100%"  loading="lazy" ></iframe>
+                   <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31094.10186319597!2d80.24958765!3d13.08268045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265d082dddb2b%3A0x919b74213211e5c3!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1703492945679!5m2!1sen!2sin" 
+  width="100%" 
+  height="100%" 
+  
+  loading="lazy" 
+  >
+</iframe>
+
+                    {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236213.0035246995!2d73.00827044332871!3d22.322336995982667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395fc8ab91a3ddab%3A0xac39d3bfe1473fb8!2sVadodara%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1761296127360!5m2!1sen!2sin" width="100%" height="100%"  loading="lazy" ></iframe> */}
                 </div>
             </div>
             
