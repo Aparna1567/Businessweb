@@ -38,21 +38,21 @@ const Commitment:React.FC=()=> {
                     </h2>
                     <div className='w-fit items-center pt-8 flex pb-10 overflow-hidden'>
                         <Image 
-                            src="/images/commitment/user1.jpg"
+                            src="/images/commitment/user1.webp"
                             alt="avatar-image"
                             width={100}
                             height={200}
                             className='object-cover w-[100px] h-[100px] rounded-full scale-105 border-4 border-white shadow-xl translate-x-3'
                         />
                         <Image 
-                            src="/images/commitment/user2.jpg"
+                            src="/images/commitment/user2.webp"
                             alt="avatar-image"
                             width={100}
                             height={200}
                             className='object-cover w-[120px] h-[120px] rounded-full border-4 border-white shadow-xl z-2 scale-110'
                         />
                         <Image 
-                            src="/images/commitment/user3.jpg"
+                            src="/images/commitment/user3.webp"
                             alt="avatar-image"
                             width={100}
                             height={200}
@@ -71,7 +71,7 @@ const Commitment:React.FC=()=> {
                         Rebranding strategy for a Growing
                     </h2>
                     <div className='w-full h-[230px]'>
-                        <Image src="/images/commitment/strategy-chart.webp" width={350} height={350} alt="strategy-chart-image" className='w-full h-full object-contain mx-auto' />
+                        <Image src="/images/commitment/strategy-chart.webp" width={350} height={350} alt="-image" className='w-full h-full object-contain mx-auto' />
                     </div>
                     </div>
                 <div className='w-full bg-white p-8 rounded-2xl flex flex-col items-start justify-between'>

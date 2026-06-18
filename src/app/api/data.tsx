@@ -43,7 +43,7 @@ export const projects = [
     category: "Architecture",
     description:
       "A modern villa project combining minimalist design and smart living features. Focused on sustainability, open layouts, and elegant finishes.",
-    image: "/images/projects/project-01.jpg",
+    image: "/images/projects/project-01.webp",
     link: "https://www.ktid.net/case-study-laurel-avenue",
   },
   {
@@ -52,7 +52,7 @@ export const projects = [
     category: "Landscape",
     description:
       "An innovative city landscaping initiative creating eco-friendly public spaces with smart irrigation and vertical gardens.",
-    image: "/images/projects/project-02.jpg",
+    image: "/images/projects/project-02.webp",
     link: "https://www.usa-shade.com/blog/guide-to-urban-landscape-design/",
   },
   {
@@ -61,7 +61,7 @@ export const projects = [
     category: "Interior Design",
     description:
       "A premium interior design project for luxury apartments featuring warm tones, bespoke furniture, and ambient lighting.",
-    image: "/images/projects/project-03.jpg",
+    image: "/images/projects/project-03.webp",
     link: "https://thearchitectsdiary.com/luxury-apartment-interior-design-excelling-in-thoughtfully-selected-decor-open-end-studio/",
   },
   {
@@ -70,7 +70,7 @@ export const projects = [
     category: "Commercial",
     description:
       "A complete transformation of a corporate workspace with open-plan design, ergonomic furniture, and acoustic optimization.",
-    image: "/images/projects/project-04.jpg",
+    image: "/images/projects/project-04.webp",
     link: "https://www.steelcase.com/research/filters/corporate-office/",
   },
 ];
@@ -79,21 +79,21 @@ export const testimonial = [
   {
     id: 1,
     text: "Working with this team was a seamless experience. The project was delivered on time with outstanding quality.",
-    image: "/images/testimonials/user.jpg",
+    image: "/images/testimonials/user.webp",
     name: "John Doe",
     position: "CEO, Alpha Tech",
   },
   {
     id: 2,
     text: "They understood our needs perfectly and created a design that exceeded expectations. Highly recommended!",
-    image: "/images/testimonials/user2.jpg",
+    image: "/images/testimonials/user2.webp",
     name: "Sarah Williams",
     position: "Marketing Manager, Creative Studio",
   },
   {
     id: 3,
     text: "Excellent communication throughout the process. I’m very happy with the final result!",
-    image: "/images/testimonials/user3.jpg",
+    image: "/images/testimonials/user3.webp",
     name: "David Miller",
     position: "Founder, Bright Vision",
   },
@@ -397,7 +397,7 @@ export const blogs = [
     author: "Marketing Team",
     category: "Marketing",
     date: "05 Sep 2025",
-    image: "/images/blog/blog-1.jpg",
+    image: "/images/blog/blog-1.webp",
   },
   {
     id: 5,
@@ -408,7 +408,7 @@ export const blogs = [
     author: "Creative Studio",
     category: "Branding",
     date: "18 Sep 2025",
-    image: "/images/blog/blog-2.jpg",
+    image: "/images/blog/blog-2.webp",
   },
   {
     id: 6,
@@ -419,7 +419,7 @@ export const blogs = [
     author: "Design Team",
     category: "Design",
     date: "29 Sep 2025",
-    image: "/images/blog/blog-3.jpg",
+    image: "/images/blog/blog-3.webp",
   },
 ];
 

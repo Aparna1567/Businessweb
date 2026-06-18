@@ -21,7 +21,16 @@ const Blog:React.FC=()=>{
                         {blogs.slice(0,1).map((item, index)=>(
                             <div key={index} className='blog-item w-full shadow-lg bg-white p-5 rounded-2xl group h-auto md:h-[640px]'>
                                 <div className='blog-image w-full rounded-2xl overflow-hidden relative'>
-                                    <Image src={item.image} alt={item.title} width={250} height={250} className='w-full h-[320px] group-hover:scale-110 transition duration-300 object-cover' />
+                                    <Image
+  src={item.image}
+  alt={item.title}
+  width={1200}
+  height={800}
+  quality={90}
+  sizes="(max-width: 768px) 100vw, 800px"
+  className="w-full h-[320px] object-cover"
+/>
+                                    {/* <Image src={item.image} alt={item.title} width={250} height={250} className='w-full h-[320px] group-hover:scale-110 transition duration-300 object-cover' /> */}
                                     <span className='absolute right-5 bottom-5 max-w-sm text-white font-chakrapetch bg-white/10 font-semibold backdrop-blur-sm rounded-sm text-2xl text-center p-3'>{item.date}</span>
                                 </div>
                                 <div className="blog-content px-2 py-5 space-y-5">
@@ -41,7 +50,16 @@ const Blog:React.FC=()=>{
                             {blogs.slice(1).map((item, index)=>(
                                 <div key={index} className="blog-item h-auto md:h-[310px] w-full flex flex-wrap md:flex-nowrap shadow-lg bg-white p-5 rounded-2xl group">
                                     <div className='blog-image w-full rounded-2xl overflow-hidden relative'>
-                                    <Image src={item.image} alt={item.title} width={250} height={250} className='w-full h-[320px] group-hover:scale-110 transition duration-300 object-cover' />
+                                        <Image
+  src={item.image}
+  alt={item.title}
+  width={1200}
+  height={800}
+  quality={90}
+  sizes="(max-width: 768px) 100vw, 800px"
+  className="w-full h-[320px] object-cover"
+/>
+                                    {/* <Image src={item.image} alt={item.title} width={250} height={250} className='w-full h-[320px] group-hover:scale-110 transition duration-300 object-cover' /> */}
                                     <span className='absolute right-5 bottom-5 max-w-sm text-white font-chakrapetch bg-white/10 font-semibold backdrop-blur-sm rounded-sm text-2xl text-center p-3'>{item.date}</span>
                                 </div>    
                                  <div className="blog-content px-2 py-5 space-y-5">

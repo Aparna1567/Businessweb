@@ -7,7 +7,8 @@ import { services } from "@/app/api/data";
 import service1 from "@/../public/images/services/service-02.webp";
 import service2 from "@/../public/images/services/service-03.webp";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
+
 
 type FAQItem={
     question:string;
@@ -49,7 +50,15 @@ const ServiceDetails =({params}:Props)=>{
         {href:"/services",text:"Service Details"}
           
     ];
-    const [openIndex,setOpenIndex]=useState<number | null>(0);
+    // const [openIndex,setOpenIndex]=useState<number | null>(0);
+
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
+const [mounted, setMounted] = useState(false);
+
+useEffect(() => {
+  setMounted(true);
+  setOpenIndex(null);
+}, []);
     const toggle=(index:number)=>{
         setOpenIndex(openIndex === index ? null : index)
     };

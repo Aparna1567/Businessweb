@@ -50,11 +50,20 @@ const Projects:React.FC=()=>{
                                 <div className="project-item flex flex-col sm:flex-row justify-center
                                 items-center w-full bg-white shadow-2xl p-5 rounded-xl gap-5 h-auto lg:h-[550px]">
                                     <div className="project-image w-full sm:w-[50%] h-full">
-                                        <Image 
+                                        <Image
+  src={project.image}
+  alt="project-item"
+  width={1200}
+  height={800}
+  quality={90}
+  sizes="(max-width: 768px) 100vw, 800px"
+  className="w-full h-[320px] object-cover rounded-xl"
+/>
+                                        {/* <Image 
                                         src={project.image} width={350} height={350} alt="project-item" 
                                         className="w-full h-full object-cover rounded-xl"
 
-                                             />
+                                             /> */}
                                     </div>
                                     <div className="project-content w-full sm:w-[50%] " >
                                         <span className="bg-white border border-prim rounded-sm px-2 text-prim font-chakrapetch font-medium">

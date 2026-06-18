@@ -5,7 +5,7 @@ import React from 'react'
 const Hero:React.FC=()=> {
   return (
     <div className='hero h-screen w-full bg-midnight_text relative overflow-hidden pt-44 pb-20'>
-        <div className="hero-image bg-[url(/images/hero/hero-bg.jpg)] absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat"></div>
+        <div className="hero-image bg-[url(/images/hero/hero-bg1.webp)] absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat"></div>
         <div className='shape-1 absolute z-30 top-0 left-0 w-[300px] h-auto flex justify-start items-start'>
             <img src="/images/hero/pattern-2.svg" alt="element-image" />
         </div>

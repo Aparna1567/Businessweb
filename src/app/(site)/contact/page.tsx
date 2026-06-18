@@ -1,15 +1,4 @@
 
-// "use client"
-// import { Icon } from '@iconify/react';
-// import Link from 'next/link';
-
-// import HeroSub from '@/components/SharedComponents/HeroSub';
-
-// export default function Page(){
-//     const breadcrumbLinks=[
-//         {href:"/",text:"Home"},
-//         {href:"/contact",text:"Contact"}
-//     ];
 "use client"
 import { Icon } from '@iconify/react';
 import HeroSub from '@/components/SharedComponents/HeroSub';
@@ -45,7 +34,7 @@ const [errors, setErrors] = useState<FormErrors>({});
     const { name, value } = e.target;
   setFormData(prev => ({ ...prev, [name]: value }));
   setErrors(prev => ({ ...prev, [name]: undefined })); // clear single field error
-  if (successMessage) setSuccessMessage(""); // hide success if they start typing again
+  // if (successMessage) setSuccessMessage(""); // hide success if they start typing again
   };
 
   const handleSubmit = (e:React.FormEvent<HTMLFormElement> ) => {
@@ -88,7 +77,7 @@ if (!formData.message?.trim()) newErrors.message = "Message is required";
   // auto-hide after 2.5 seconds
   setTimeout(() => {
     setSuccessMessage("");
-  }, 2500);
+  }, 4500);
   };
 
     return(

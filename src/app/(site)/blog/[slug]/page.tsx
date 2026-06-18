@@ -30,7 +30,7 @@ const recentPosts=[
 import blog01 from "@/../public/images/blogdetails/blog-1.webp";
 import blog02 from "@/../public/images/blogdetails/blog-2.webp";
 export const metadata: Metadata={
-    title:"Bog Details | Axora",
+    title:"Blog Details | Axora",
 }
 // type Props={
 //     params:{slug:string};
@@ -196,7 +196,7 @@ const BlogDetails = async ({ params }: Props) => {
                                                 <h4 className="text-black pb-5">Tags</h4>
                                                 <div className="flex flex-wrap gap-2">
                                                     {["Branding","Business","Consulting","Design","Innovate","Lead","Marketing"].map((tag)=>(
-                                                        <span key={tag} className="border border-border px-3 py-0.5 rounded-sm hover:bg-pera-dark hover:border-transparent hover:text-white transition-colors duration-300">
+                                                        <span key={tag} className="border border-border px-3 py-0.5 rounded-sm hover:bg-pera-dark  hover:text-white transition-colors duration-300">
                                                             {tag}
                                                         </span>
                                                     ))}

@@ -48,11 +48,22 @@ return(
                     filteredBlogs.map((item)=>(
                         <div key={item.id} className="blog-item border-border w-full bg-white p-5 rounded-2xl group h-auto mb-5">
                             <div className="blog-image w-full rounded-2xl overflow-hidden relative">
-                                <Image src={item.image} alt={item.title} width={250} height={250} className="w-full h-[320px] group-hover:scle-100 transition duration-300 object-cover" />
-                                <span className="absolute right-5 bottom-5 text-white font-chakrapetch bg-white/10 font-semibold backdrop-blur-sm rounded-sm text-2xl text-center p-3">
+
+                                <Image
+  src={item.image}
+  alt={item.title}
+  width={1200}
+  height={800}
+  quality={90}
+  sizes="(max-width: 768px) 100vw, 800px"
+  className="w-full h-[320px] object-cover"
+/>
+
+                                {/* <Image src={item.image} alt={item.title} width={250} height={250} className="w-full h-[320px] group-hover:scale-100 transition duration-300 object-cover" /> */}
+                                <span className="absolute right-5 bottom-5 text-white font-chakrapetch bg-white/10 backdrop-blur-sm font-semibold  rounded-sm text-2xl text-center p-3">
                                 {item.date}
                                 </span>
-                                
+                              
                                 </div>
                                 <div className="blog-content px-2 py-2 space-y-5">
                                     <p>
