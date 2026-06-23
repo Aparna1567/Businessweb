@@ -248,3 +248,13 @@ margin-bottom: 16px;
   z-index:9;opacity:0.3;
 }
 
+@keyframes floatAurora {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+}
