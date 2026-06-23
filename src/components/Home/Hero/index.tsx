@@ -13,24 +13,45 @@ const Hero:React.FC=()=> {
   priority
   className="object-cover"
  />
-        <div className='shape-1 absolute z-30 top-0 left-0 w-[300px] h-auto flex justify-start items-start'>
+        {/* <div className='shape-1 absolute z-30 top-0 left-0 w-[300px] h-auto flex justify-start items-start'> */}
             {/* <img src="/images/hero/pattern-2.svg" alt="element-image" /> */}
-            <Image
+            {/* <Image
   src="/images/hero/pattern-2.svg"
   alt="Pattern"
   width={300}
   height={300}
-/>
-        </div>
-        <div className='shape-2 absolute z-30 right-0 bottom-0 w-[300px] h-auto flex justify-center items-start'>
+/> */}
+        {/* </div> */}
+        {/* <div className='shape-2 absolute z-30 right-0 bottom-0 w-[300px] h-auto flex justify-center items-start'> */}
             {/* <img src="/images/hero/pattern-3.svg" alt="element-image" /> */}
-            <Image
-  src="/images/hero/pattern-3.svg"
-  alt="Pattern"
-  width={300}
-  height={300}
+            
+        {/* </div> */}
+        <div
+  className="
+    shape-1
+    absolute
+    top-0
+    left-0
+    w-[300px]
+    h-[300px]
+    bg-[url('/images/hero/pattern-2.svg')]
+    bg-contain
+    bg-no-repeat
+  "
 />
-        </div>
+<div
+  className="
+    shape-2
+    absolute
+    right-0
+    bottom-0
+    w-[300px]
+    h-[300px]
+    bg-[url('/images/hero/pattern-3.svg')]
+    bg-contain
+    bg-no-repeat
+  "
+/>
         <div className='container mx-auto lg:max-w-(--breakpoint-xl)  md:max-w-(--breakpoint-md) z-20 text-white relative px-4 flex flex-col justify-center items-start h-full'>
             <div className="hero-content text-white">
                 <h2 className='md:text-60 sm:text-40 text-28 text-white mb-9 lg:mb-3 w-full lg:w-3/4'>
