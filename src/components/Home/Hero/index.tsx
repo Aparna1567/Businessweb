@@ -6,13 +6,16 @@ const Hero:React.FC=()=> {
   return (
     <div className='hero h-screen w-full bg-midnight_text relative overflow-hidden pt-44 pb-20'>
       
-       <Image
+     <Image
   src="/images/hero/hero-bg1.webp"
   alt="Hero Background"
   fill
   priority
+  quality={80}
+  sizes="100vw"
   className="object-cover"
- />
+/>
+ {/* <div className="absolute inset-0 bg-gradient-to-br from-[#020617] via-[#0f172a] to-[#111827]" /> */}
        
         <div className='container mx-auto lg:max-w-(--breakpoint-xl)  md:max-w-(--breakpoint-md) z-20 text-white relative px-4 flex flex-col justify-center items-start h-full'>
             <div className="hero-content text-white">

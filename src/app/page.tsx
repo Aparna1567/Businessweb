@@ -1,12 +1,35 @@
-import Blog from "@/components/Home/Blog";
-import Commitment from "@/components/Home/Commitment";
-import Companies from "@/components/Home/Companies";
+
+
+
 import Hero from "@/components/Home/Hero";
-import Pricing from "@/components/Home/Pricing";
-import Process from "@/components/Home/Process";
-import Projects from "@/components/Home/Projects";
 import Solution from "@/components/Home/Solution";
-import Testimonials from "@/components/Home/Testimonials";
+import Companies from "@/components/Home/Companies";
+
+import dynamic from "next/dynamic";
+
+const Commitment = dynamic(
+  () => import("@/components/Home/Commitment")
+);
+
+const Process = dynamic(
+  () => import("@/components/Home/Process")
+);
+
+const Projects = dynamic(
+  () => import("@/components/Home/Projects")
+);
+
+const Testimonials = dynamic(
+  () => import("@/components/Home/Testimonials")
+);
+
+const Pricing = dynamic(
+  () => import("@/components/Home/Pricing")
+);
+
+const Blog = dynamic(
+  () => import("@/components/Home/Blog")
+);
 import Image from "next/image";
 
 export default function Home() {
